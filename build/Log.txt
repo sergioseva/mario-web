@@ -1,0 +1,376 @@
+2012-02-25 09:33:36,953 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'manual+4%' OR
+2012-02-25 09:33:37,031 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'manual+4%' OR
+2012-02-25 09:33:37,031 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'manual+4%' OR
+2012-02-25 09:33:37,031 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'manual+4%' OR
+2012-02-25 09:33:37,031 [http-8400-1] DEBUG - where: cg_autor like 'manual+4%' OR cg_descripcion like 'manual+4%' OR cg_editorial like 'manual+4%' OR cg_isbn like 'manual+4%' OR
+2012-02-25 09:33:37,031 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'manual+4%' OR cg_descripcion like 'manual+4%' OR cg_editorial like 'manual+4%' OR cg_isbn like 'manual+4%' ORDER BY cg_descripcion
+2012-02-25 09:33:37,890 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'manual+4%' OR cg_descripcion like 'manual+4%' OR cg_editorial like 'manual+4%' OR cg_isbn like 'manual+4%' ORDER BY cg_descripcion
+2012-02-25 09:33:37,890 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - termino:manual+4
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%manual%' AND
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%manual%' AND cg_autor like '%4%' AND
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - ( cg_autor like '%manual%' AND cg_autor like '%4%') OR
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - retorno genera like:( cg_autor like '%manual%' AND cg_autor like '%4%') OR
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - termino:manual+4
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 09:33:39,031 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%manual%' AND
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%manual%' AND cg_descripcion like '%4%' AND
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - ( cg_descripcion like '%manual%' AND cg_descripcion like '%4%') OR
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - retorno genera like:( cg_descripcion like '%manual%' AND cg_descripcion like '%4%') OR
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - termino:manual+4
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%manual%' AND
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%manual%' AND cg_editorial like '%4%' AND
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - ( cg_editorial like '%manual%' AND cg_editorial like '%4%') OR
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - retorno genera like:( cg_editorial like '%manual%' AND cg_editorial like '%4%') OR
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - termino:manual+4
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%manual%' AND
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%manual%' AND cg_isbn like '%4%' AND
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - ( cg_isbn like '%manual%' AND cg_isbn like '%4%') OR
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - retorno genera like:( cg_isbn like '%manual%' AND cg_isbn like '%4%') OR
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - where:( cg_autor like '%manual%' AND cg_autor like '%4%') OR( cg_descripcion like '%manual%' AND cg_descripcion like '%4%') OR( cg_editorial like '%manual%' AND cg_editorial like '%4%') OR( cg_isbn like '%manual%' AND cg_isbn like '%4%') OR
+2012-02-25 09:33:39,046 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%manual%' AND cg_autor like '%4%') OR( cg_descripcion like '%manual%' AND cg_descripcion like '%4%') OR( cg_editorial like '%manual%' AND cg_editorial like '%4%') OR( cg_isbn like '%manual%' AND cg_isbn like '%4%') ORDER BY cg_descripcion
+2012-02-25 09:33:39,406 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%manual%' AND cg_autor like '%4%') OR( cg_descripcion like '%manual%' AND cg_descripcion like '%4%') OR( cg_editorial like '%manual%' AND cg_editorial like '%4%') OR( cg_isbn like '%manual%' AND cg_isbn like '%4%') ORDER BY cg_descripcion
+2012-02-25 09:33:39,437 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - termino:matematica
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%matematica%' AND
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - ( cg_autor like '%matematica%') OR
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - termino:1
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%1%' AND
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - ( cg_autor like '%matematica%') OR( cg_autor like '%1%') OR
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - retorno genera like:( cg_autor like '%matematica%') OR( cg_autor like '%1%') OR
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - termino:matematica
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%matematica%' AND
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - ( cg_descripcion like '%matematica%') OR
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - termino:1
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%1%' AND
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - ( cg_descripcion like '%matematica%') OR( cg_descripcion like '%1%') OR
+2012-02-25 09:34:33,187 [http-8400-1] DEBUG - retorno genera like:( cg_descripcion like '%matematica%') OR( cg_descripcion like '%1%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - termino:matematica
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%matematica%' AND
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - ( cg_editorial like '%matematica%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - termino:1
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%1%' AND
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - ( cg_editorial like '%matematica%') OR( cg_editorial like '%1%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - retorno genera like:( cg_editorial like '%matematica%') OR( cg_editorial like '%1%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - termino:matematica
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%matematica%' AND
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - ( cg_isbn like '%matematica%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - termino:1
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - encontré 1 terminos
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%1%' AND
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - ( cg_isbn like '%matematica%') OR( cg_isbn like '%1%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - retorno genera like:( cg_isbn like '%matematica%') OR( cg_isbn like '%1%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - where:( cg_autor like '%matematica%') OR( cg_autor like '%1%') OR( cg_descripcion like '%matematica%') OR( cg_descripcion like '%1%') OR( cg_editorial like '%matematica%') OR( cg_editorial like '%1%') OR( cg_isbn like '%matematica%') OR( cg_isbn like '%1%') OR
+2012-02-25 09:34:33,203 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%matematica%') OR( cg_autor like '%1%') OR( cg_descripcion like '%matematica%') OR( cg_descripcion like '%1%') OR( cg_editorial like '%matematica%') OR( cg_editorial like '%1%') OR( cg_isbn like '%matematica%') OR( cg_isbn like '%1%') ORDER BY cg_descripcion
+2012-02-25 09:34:35,640 [http-8400-2] DEBUG - retorno genera like: cg_autor like 'matematica 1%' OR
+2012-02-25 09:34:35,656 [http-8400-2] DEBUG - retorno genera like: cg_descripcion like 'matematica 1%' OR
+2012-02-25 09:34:35,656 [http-8400-2] DEBUG - retorno genera like: cg_editorial like 'matematica 1%' OR
+2012-02-25 09:34:35,656 [http-8400-2] DEBUG - retorno genera like: cg_isbn like 'matematica 1%' OR
+2012-02-25 09:34:35,656 [http-8400-2] DEBUG - where: cg_autor like 'matematica 1%' OR cg_descripcion like 'matematica 1%' OR cg_editorial like 'matematica 1%' OR cg_isbn like 'matematica 1%' OR
+2012-02-25 09:34:35,750 [http-8400-2] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'matematica 1%' OR cg_descripcion like 'matematica 1%' OR cg_editorial like 'matematica 1%' OR cg_isbn like 'matematica 1%' ORDER BY cg_descripcion
+2012-02-25 09:34:36,109 [http-8400-2] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'matematica 1%' OR cg_descripcion like 'matematica 1%' OR cg_editorial like 'matematica 1%' OR cg_isbn like 'matematica 1%' ORDER BY cg_descripcion
+2012-02-25 09:34:36,125 [http-8400-2] DEBUG - fin de retorno de lista
+2012-02-25 09:34:43,500 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%matematica%') OR( cg_autor like '%1%') OR( cg_descripcion like '%matematica%') OR( cg_descripcion like '%1%') OR( cg_editorial like '%matematica%') OR( cg_editorial like '%1%') OR( cg_isbn like '%matematica%') OR( cg_isbn like '%1%') ORDER BY cg_descripcion
+2012-02-25 09:34:45,062 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 09:35:04,781 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'matematica 1%' OR
+2012-02-25 09:35:04,781 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'matematica 1%' OR
+2012-02-25 09:35:04,781 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'matematica 1%' OR
+2012-02-25 09:35:04,781 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'matematica 1%' OR
+2012-02-25 09:35:04,781 [http-8400-1] DEBUG - where: cg_autor like 'matematica 1%' OR cg_descripcion like 'matematica 1%' OR cg_editorial like 'matematica 1%' OR cg_isbn like 'matematica 1%' OR
+2012-02-25 09:35:04,781 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'matematica 1%' OR cg_descripcion like 'matematica 1%' OR cg_editorial like 'matematica 1%' OR cg_isbn like 'matematica 1%' ORDER BY cg_descripcion
+2012-02-25 09:35:05,046 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'matematica 1%' OR cg_descripcion like 'matematica 1%' OR cg_editorial like 'matematica 1%' OR cg_isbn like 'matematica 1%' ORDER BY cg_descripcion
+2012-02-25 09:35:05,046 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 09:59:10,750 [http-8400-2] DEBUG - retorno genera like: cg_autor like 'cuentos cor%' OR
+2012-02-25 09:59:10,750 [http-8400-2] DEBUG - retorno genera like: cg_descripcion like 'cuentos cor%' OR
+2012-02-25 09:59:10,750 [http-8400-2] DEBUG - retorno genera like: cg_editorial like 'cuentos cor%' OR
+2012-02-25 09:59:10,750 [http-8400-2] DEBUG - retorno genera like: cg_isbn like 'cuentos cor%' OR
+2012-02-25 09:59:10,750 [http-8400-2] DEBUG - where: cg_autor like 'cuentos cor%' OR cg_descripcion like 'cuentos cor%' OR cg_editorial like 'cuentos cor%' OR cg_isbn like 'cuentos cor%' OR
+2012-02-25 09:59:10,750 [http-8400-2] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'cuentos cor%' OR cg_descripcion like 'cuentos cor%' OR cg_editorial like 'cuentos cor%' OR cg_isbn like 'cuentos cor%' ORDER BY cg_descripcion
+2012-02-25 09:59:11,015 [http-8400-2] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'cuentos cor%' OR cg_descripcion like 'cuentos cor%' OR cg_editorial like 'cuentos cor%' OR cg_isbn like 'cuentos cor%' ORDER BY cg_descripcion
+2012-02-25 09:59:11,015 [http-8400-2] DEBUG - fin de retorno de lista
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - termino:matematica+cuarto
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%matematica%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%matematica%' AND cg_autor like '%cuarto%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - ( cg_autor like '%matematica%' AND cg_autor like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - retorno genera like:( cg_autor like '%matematica%' AND cg_autor like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - termino:matematica+cuarto
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%matematica%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%matematica%' AND cg_descripcion like '%cuarto%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - ( cg_descripcion like '%matematica%' AND cg_descripcion like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - retorno genera like:( cg_descripcion like '%matematica%' AND cg_descripcion like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - termino:matematica+cuarto
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%matematica%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%matematica%' AND cg_editorial like '%cuarto%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - ( cg_editorial like '%matematica%' AND cg_editorial like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - retorno genera like:( cg_editorial like '%matematica%' AND cg_editorial like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - termino:matematica+cuarto
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%matematica%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%matematica%' AND cg_isbn like '%cuarto%' AND
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - ( cg_isbn like '%matematica%' AND cg_isbn like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - retorno genera like:( cg_isbn like '%matematica%' AND cg_isbn like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - where:( cg_autor like '%matematica%' AND cg_autor like '%cuarto%') OR( cg_descripcion like '%matematica%' AND cg_descripcion like '%cuarto%') OR( cg_editorial like '%matematica%' AND cg_editorial like '%cuarto%') OR( cg_isbn like '%matematica%' AND cg_isbn like '%cuarto%') OR
+2012-02-25 10:15:15,234 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%matematica%' AND cg_autor like '%cuarto%') OR( cg_descripcion like '%matematica%' AND cg_descripcion like '%cuarto%') OR( cg_editorial like '%matematica%' AND cg_editorial like '%cuarto%') OR( cg_isbn like '%matematica%' AND cg_isbn like '%cuarto%') ORDER BY cg_descripcion
+2012-02-25 10:15:15,500 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%matematica%' AND cg_autor like '%cuarto%') OR( cg_descripcion like '%matematica%' AND cg_descripcion like '%cuarto%') OR( cg_editorial like '%matematica%' AND cg_editorial like '%cuarto%') OR( cg_isbn like '%matematica%' AND cg_isbn like '%cuarto%') ORDER BY cg_descripcion
+2012-02-25 10:15:15,500 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:15:32,171 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'sociales 4%' OR
+2012-02-25 10:15:32,171 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'sociales 4%' OR
+2012-02-25 10:15:32,171 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'sociales 4%' OR
+2012-02-25 10:15:32,171 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'sociales 4%' OR
+2012-02-25 10:15:32,171 [http-8400-1] DEBUG - where: cg_autor like 'sociales 4%' OR cg_descripcion like 'sociales 4%' OR cg_editorial like 'sociales 4%' OR cg_isbn like 'sociales 4%' OR
+2012-02-25 10:15:32,171 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'sociales 4%' OR cg_descripcion like 'sociales 4%' OR cg_editorial like 'sociales 4%' OR cg_isbn like 'sociales 4%' ORDER BY cg_descripcion
+2012-02-25 10:15:32,421 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'sociales 4%' OR cg_descripcion like 'sociales 4%' OR cg_editorial like 'sociales 4%' OR cg_isbn like 'sociales 4%' ORDER BY cg_descripcion
+2012-02-25 10:15:32,421 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:16:21,968 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'sociales+entender%' OR
+2012-02-25 10:16:21,968 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'sociales+entender%' OR
+2012-02-25 10:16:21,968 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'sociales+entender%' OR
+2012-02-25 10:16:21,968 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'sociales+entender%' OR
+2012-02-25 10:16:21,968 [http-8400-1] DEBUG - where: cg_autor like 'sociales+entender%' OR cg_descripcion like 'sociales+entender%' OR cg_editorial like 'sociales+entender%' OR cg_isbn like 'sociales+entender%' OR
+2012-02-25 10:16:21,968 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'sociales+entender%' OR cg_descripcion like 'sociales+entender%' OR cg_editorial like 'sociales+entender%' OR cg_isbn like 'sociales+entender%' ORDER BY cg_descripcion
+2012-02-25 10:16:22,218 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'sociales+entender%' OR cg_descripcion like 'sociales+entender%' OR cg_editorial like 'sociales+entender%' OR cg_isbn like 'sociales+entender%' ORDER BY cg_descripcion
+2012-02-25 10:16:22,218 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%sociales%' AND
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%sociales%' AND cg_autor like '%entender%' AND
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - ( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - retorno genera like:( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%sociales%' AND
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%' AND
+2012-02-25 10:16:24,312 [http-8400-1] DEBUG - ( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - retorno genera like:( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%sociales%' AND
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%sociales%' AND cg_editorial like '%entender%' AND
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - ( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - retorno genera like:( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%sociales%' AND
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%sociales%' AND cg_isbn like '%entender%' AND
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - ( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') OR
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - retorno genera like:( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') OR
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - where:( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') OR
+2012-02-25 10:16:24,328 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') ORDER BY cg_descripcion
+2012-02-25 10:16:24,593 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') ORDER BY cg_descripcion
+2012-02-25 10:16:24,593 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%sociales%' AND
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%sociales%' AND cg_autor like '%entender%' AND
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - ( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - retorno genera like:( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%sociales%' AND
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%' AND
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - ( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR
+2012-02-25 10:16:26,203 [http-8400-1] DEBUG - retorno genera like:( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%sociales%' AND
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%sociales%' AND cg_editorial like '%entender%' AND
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - ( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - retorno genera like:( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - termino:sociales+entender
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%sociales%' AND
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%sociales%' AND cg_isbn like '%entender%' AND
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - ( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') OR
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - retorno genera like:( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') OR
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - where:( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') OR
+2012-02-25 10:16:26,218 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') ORDER BY cg_descripcion
+2012-02-25 10:16:26,484 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%sociales%' AND cg_autor like '%entender%') OR( cg_descripcion like '%sociales%' AND cg_descripcion like '%entender%') OR( cg_editorial like '%sociales%' AND cg_editorial like '%entender%') OR( cg_isbn like '%sociales%' AND cg_isbn like '%entender%') ORDER BY cg_descripcion
+2012-02-25 10:16:26,484 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:16:44,421 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'entender%' OR
+2012-02-25 10:16:44,421 [http-8400-1] DEBUG - where: cg_autor like 'entender%' OR
+2012-02-25 10:16:44,421 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'entender%' ORDER BY cg_descripcion
+2012-02-25 10:16:44,656 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'entender%' ORDER BY cg_descripcion
+2012-02-25 10:16:44,656 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:17:25,453 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'mil y una noches%' OR
+2012-02-25 10:17:25,453 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'mil y una noches%' OR
+2012-02-25 10:17:25,453 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'mil y una noches%' OR
+2012-02-25 10:17:25,453 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'mil y una noches%' OR
+2012-02-25 10:17:25,453 [http-8400-1] DEBUG - where: cg_autor like 'mil y una noches%' OR cg_descripcion like 'mil y una noches%' OR cg_editorial like 'mil y una noches%' OR cg_isbn like 'mil y una noches%' OR
+2012-02-25 10:17:25,453 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'mil y una noches%' OR cg_descripcion like 'mil y una noches%' OR cg_editorial like 'mil y una noches%' OR cg_isbn like 'mil y una noches%' ORDER BY cg_descripcion
+2012-02-25 10:17:25,734 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'mil y una noches%' OR cg_descripcion like 'mil y una noches%' OR cg_editorial like 'mil y una noches%' OR cg_isbn like 'mil y una noches%' ORDER BY cg_descripcion
+2012-02-25 10:17:25,734 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:21:32,890 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'dragon+s¡%' OR
+2012-02-25 10:21:32,890 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'dragon+s¡%' OR
+2012-02-25 10:21:32,890 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'dragon+s¡%' OR
+2012-02-25 10:21:32,890 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'dragon+s¡%' OR
+2012-02-25 10:21:32,890 [http-8400-1] DEBUG - where: cg_autor like 'dragon+s¡%' OR cg_descripcion like 'dragon+s¡%' OR cg_editorial like 'dragon+s¡%' OR cg_isbn like 'dragon+s¡%' OR
+2012-02-25 10:21:32,890 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'dragon+s¡%' OR cg_descripcion like 'dragon+s¡%' OR cg_editorial like 'dragon+s¡%' OR cg_isbn like 'dragon+s¡%' ORDER BY cg_descripcion
+2012-02-25 10:21:33,156 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'dragon+s¡%' OR cg_descripcion like 'dragon+s¡%' OR cg_editorial like 'dragon+s¡%' OR cg_isbn like 'dragon+s¡%' ORDER BY cg_descripcion
+2012-02-25 10:21:33,156 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:21:35,390 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'dragon+asus%' OR
+2012-02-25 10:21:35,390 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'dragon+asus%' OR
+2012-02-25 10:21:35,390 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'dragon+asus%' OR
+2012-02-25 10:21:35,390 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'dragon+asus%' OR
+2012-02-25 10:21:35,390 [http-8400-1] DEBUG - where: cg_autor like 'dragon+asus%' OR cg_descripcion like 'dragon+asus%' OR cg_editorial like 'dragon+asus%' OR cg_isbn like 'dragon+asus%' OR
+2012-02-25 10:21:35,390 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'dragon+asus%' OR cg_descripcion like 'dragon+asus%' OR cg_editorial like 'dragon+asus%' OR cg_isbn like 'dragon+asus%' ORDER BY cg_descripcion
+2012-02-25 10:21:35,656 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'dragon+asus%' OR cg_descripcion like 'dragon+asus%' OR cg_editorial like 'dragon+asus%' OR cg_isbn like 'dragon+asus%' ORDER BY cg_descripcion
+2012-02-25 10:21:35,656 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - termino:dragon+asus
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%dragon%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%dragon%' AND cg_autor like '%asus%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - ( cg_autor like '%dragon%' AND cg_autor like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - retorno genera like:( cg_autor like '%dragon%' AND cg_autor like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - termino:dragon+asus
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%dragon%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%dragon%' AND cg_descripcion like '%asus%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - ( cg_descripcion like '%dragon%' AND cg_descripcion like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - retorno genera like:( cg_descripcion like '%dragon%' AND cg_descripcion like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - termino:dragon+asus
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%dragon%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%dragon%' AND cg_editorial like '%asus%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - ( cg_editorial like '%dragon%' AND cg_editorial like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - retorno genera like:( cg_editorial like '%dragon%' AND cg_editorial like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - termino:dragon+asus
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%dragon%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%dragon%' AND cg_isbn like '%asus%' AND
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - ( cg_isbn like '%dragon%' AND cg_isbn like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - retorno genera like:( cg_isbn like '%dragon%' AND cg_isbn like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - where:( cg_autor like '%dragon%' AND cg_autor like '%asus%') OR( cg_descripcion like '%dragon%' AND cg_descripcion like '%asus%') OR( cg_editorial like '%dragon%' AND cg_editorial like '%asus%') OR( cg_isbn like '%dragon%' AND cg_isbn like '%asus%') OR
+2012-02-25 10:21:37,421 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%dragon%' AND cg_autor like '%asus%') OR( cg_descripcion like '%dragon%' AND cg_descripcion like '%asus%') OR( cg_editorial like '%dragon%' AND cg_editorial like '%asus%') OR( cg_isbn like '%dragon%' AND cg_isbn like '%asus%') ORDER BY cg_descripcion
+2012-02-25 10:21:37,781 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%dragon%' AND cg_autor like '%asus%') OR( cg_descripcion like '%dragon%' AND cg_descripcion like '%asus%') OR( cg_editorial like '%dragon%' AND cg_editorial like '%asus%') OR( cg_isbn like '%dragon%' AND cg_isbn like '%asus%') ORDER BY cg_descripcion
+2012-02-25 10:21:37,781 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:22:05,046 [http-8400-1] DEBUG - termino:cuentos+cort
+2012-02-25 10:22:05,046 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:22:05,046 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%cuentos%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_autor like '%cuentos%' AND cg_autor like '%cort%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - ( cg_autor like '%cuentos%' AND cg_autor like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - retorno genera like:( cg_autor like '%cuentos%' AND cg_autor like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - termino:cuentos+cort
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%cuentos%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_descripcion like '%cuentos%' AND cg_descripcion like '%cort%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - ( cg_descripcion like '%cuentos%' AND cg_descripcion like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - retorno genera like:( cg_descripcion like '%cuentos%' AND cg_descripcion like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - termino:cuentos+cort
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%cuentos%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_editorial like '%cuentos%' AND cg_editorial like '%cort%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - ( cg_editorial like '%cuentos%' AND cg_editorial like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - retorno genera like:( cg_editorial like '%cuentos%' AND cg_editorial like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - termino:cuentos+cort
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - busco si tiene el signo +
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - encontré 2 terminos
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%cuentos%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - condicion_and:( cg_isbn like '%cuentos%' AND cg_isbn like '%cort%' AND
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - ( cg_isbn like '%cuentos%' AND cg_isbn like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - retorno genera like:( cg_isbn like '%cuentos%' AND cg_isbn like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - where:( cg_autor like '%cuentos%' AND cg_autor like '%cort%') OR( cg_descripcion like '%cuentos%' AND cg_descripcion like '%cort%') OR( cg_editorial like '%cuentos%' AND cg_editorial like '%cort%') OR( cg_isbn like '%cuentos%' AND cg_isbn like '%cort%') OR
+2012-02-25 10:22:05,062 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%cuentos%' AND cg_autor like '%cort%') OR( cg_descripcion like '%cuentos%' AND cg_descripcion like '%cort%') OR( cg_editorial like '%cuentos%' AND cg_editorial like '%cort%') OR( cg_isbn like '%cuentos%' AND cg_isbn like '%cort%') ORDER BY cg_descripcion
+2012-02-25 10:22:05,343 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE ( cg_autor like '%cuentos%' AND cg_autor like '%cort%') OR( cg_descripcion like '%cuentos%' AND cg_descripcion like '%cort%') OR( cg_editorial like '%cuentos%' AND cg_editorial like '%cort%') OR( cg_isbn like '%cuentos%' AND cg_isbn like '%cort%') ORDER BY cg_descripcion
+2012-02-25 10:22:05,343 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:51:29,875 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'ganas de tener%' OR
+2012-02-25 10:51:29,875 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'ganas de tener%' OR
+2012-02-25 10:51:29,875 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'ganas de tener%' OR
+2012-02-25 10:51:29,875 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'ganas de tener%' OR
+2012-02-25 10:51:29,875 [http-8400-1] DEBUG - where: cg_autor like 'ganas de tener%' OR cg_descripcion like 'ganas de tener%' OR cg_editorial like 'ganas de tener%' OR cg_isbn like 'ganas de tener%' OR
+2012-02-25 10:51:29,875 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'ganas de tener%' OR cg_descripcion like 'ganas de tener%' OR cg_editorial like 'ganas de tener%' OR cg_isbn like 'ganas de tener%' ORDER BY cg_descripcion
+2012-02-25 10:51:30,125 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'ganas de tener%' OR cg_descripcion like 'ganas de tener%' OR cg_editorial like 'ganas de tener%' OR cg_isbn like 'ganas de tener%' ORDER BY cg_descripcion
+2012-02-25 10:51:30,125 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:51:58,406 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'teatro por t%' OR
+2012-02-25 10:51:58,406 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'teatro por t%' OR
+2012-02-25 10:51:58,406 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'teatro por t%' OR
+2012-02-25 10:51:58,406 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'teatro por t%' OR
+2012-02-25 10:51:58,406 [http-8400-1] DEBUG - where: cg_autor like 'teatro por t%' OR cg_descripcion like 'teatro por t%' OR cg_editorial like 'teatro por t%' OR cg_isbn like 'teatro por t%' OR
+2012-02-25 10:51:58,406 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'teatro por t%' OR cg_descripcion like 'teatro por t%' OR cg_editorial like 'teatro por t%' OR cg_isbn like 'teatro por t%' ORDER BY cg_descripcion
+2012-02-25 10:51:58,671 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'teatro por t%' OR cg_descripcion like 'teatro por t%' OR cg_editorial like 'teatro por t%' OR cg_isbn like 'teatro por t%' ORDER BY cg_descripcion
+2012-02-25 10:51:58,671 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:52:15,906 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'teatro por tres%' OR
+2012-02-25 10:52:15,906 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'teatro por tres%' OR
+2012-02-25 10:52:15,906 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'teatro por tres%' OR
+2012-02-25 10:52:15,906 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'teatro por tres%' OR
+2012-02-25 10:52:15,906 [http-8400-1] DEBUG - where: cg_autor like 'teatro por tres%' OR cg_descripcion like 'teatro por tres%' OR cg_editorial like 'teatro por tres%' OR cg_isbn like 'teatro por tres%' OR
+2012-02-25 10:52:15,906 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'teatro por tres%' OR cg_descripcion like 'teatro por tres%' OR cg_editorial like 'teatro por tres%' OR cg_isbn like 'teatro por tres%' ORDER BY cg_descripcion
+2012-02-25 10:52:16,140 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'teatro por tres%' OR cg_descripcion like 'teatro por tres%' OR cg_editorial like 'teatro por tres%' OR cg_isbn like 'teatro por tres%' ORDER BY cg_descripcion
+2012-02-25 10:52:16,140 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:52:33,562 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'mujer de la casa sin%' OR
+2012-02-25 10:52:33,562 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'mujer de la casa sin%' OR
+2012-02-25 10:52:33,562 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'mujer de la casa sin%' OR
+2012-02-25 10:52:33,562 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'mujer de la casa sin%' OR
+2012-02-25 10:52:33,562 [http-8400-1] DEBUG - where: cg_autor like 'mujer de la casa sin%' OR cg_descripcion like 'mujer de la casa sin%' OR cg_editorial like 'mujer de la casa sin%' OR cg_isbn like 'mujer de la casa sin%' OR
+2012-02-25 10:52:33,562 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'mujer de la casa sin%' OR cg_descripcion like 'mujer de la casa sin%' OR cg_editorial like 'mujer de la casa sin%' OR cg_isbn like 'mujer de la casa sin%' ORDER BY cg_descripcion
+2012-02-25 10:52:33,828 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'mujer de la casa sin%' OR cg_descripcion like 'mujer de la casa sin%' OR cg_editorial like 'mujer de la casa sin%' OR cg_isbn like 'mujer de la casa sin%' ORDER BY cg_descripcion
+2012-02-25 10:52:33,828 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:52:55,906 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'de la cabeza%' OR
+2012-02-25 10:52:55,906 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'de la cabeza%' OR
+2012-02-25 10:52:55,906 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'de la cabeza%' OR
+2012-02-25 10:52:55,906 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'de la cabeza%' OR
+2012-02-25 10:52:55,906 [http-8400-1] DEBUG - where: cg_autor like 'de la cabeza%' OR cg_descripcion like 'de la cabeza%' OR cg_editorial like 'de la cabeza%' OR cg_isbn like 'de la cabeza%' OR
+2012-02-25 10:52:55,906 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'de la cabeza%' OR cg_descripcion like 'de la cabeza%' OR cg_editorial like 'de la cabeza%' OR cg_isbn like 'de la cabeza%' ORDER BY cg_descripcion
+2012-02-25 10:52:56,156 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'de la cabeza%' OR cg_descripcion like 'de la cabeza%' OR cg_editorial like 'de la cabeza%' OR cg_isbn like 'de la cabeza%' ORDER BY cg_descripcion
+2012-02-25 10:52:56,156 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 10:55:13,171 [http-8400-1] DEBUG - insertando
+2012-02-25 10:55:13,171 [http-8400-1] DEBUG - INSERT INTO librosmario.cg_catalogo ( cg_autor, cg_descripcion, cg_precio, cg_pedido, cg_editorial, cg_tema, cg_isbn, cg_pst, cg_observaciones, cg_creador,cg_inputdate)  values ('','TEATRO POR TRES DE LA CABEZA A LOS PIES ',29.0,0,'','null','',0,'','librosmario',now());
+2012-02-25 10:55:13,187 [http-8400-1] DEBUG - inserté:INSERT INTO librosmario.cg_catalogo ( cg_autor, cg_descripcion, cg_precio, cg_pedido, cg_editorial, cg_tema, cg_isbn, cg_pst, cg_observaciones, cg_creador,cg_inputdate)  values ('','TEATRO POR TRES DE LA CABEZA A LOS PIES ',29.0,0,'','null','',0,'','librosmario',now());
+2012-02-25 10:55:35,421 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'teatro por tres%' OR
+2012-02-25 10:55:35,421 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'teatro por tres%' OR
+2012-02-25 10:55:35,421 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'teatro por tres%' OR
+2012-02-25 10:55:35,421 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'teatro por tres%' OR
+2012-02-25 10:55:35,421 [http-8400-1] DEBUG - where: cg_autor like 'teatro por tres%' OR cg_descripcion like 'teatro por tres%' OR cg_editorial like 'teatro por tres%' OR cg_isbn like 'teatro por tres%' OR
+2012-02-25 10:55:35,421 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'teatro por tres%' OR cg_descripcion like 'teatro por tres%' OR cg_editorial like 'teatro por tres%' OR cg_isbn like 'teatro por tres%' ORDER BY cg_descripcion
+2012-02-25 10:55:35,687 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'teatro por tres%' OR cg_descripcion like 'teatro por tres%' OR cg_editorial like 'teatro por tres%' OR cg_isbn like 'teatro por tres%' ORDER BY cg_descripcion
+2012-02-25 10:55:35,687 [http-8400-1] DEBUG - fin de retorno de lista
+2012-02-25 11:06:44,734 [http-8400-1] DEBUG - retorno genera like: cg_autor like 'family and fr%' OR
+2012-02-25 11:06:44,734 [http-8400-1] DEBUG - retorno genera like: cg_descripcion like 'family and fr%' OR
+2012-02-25 11:06:44,734 [http-8400-1] DEBUG - retorno genera like: cg_editorial like 'family and fr%' OR
+2012-02-25 11:06:44,734 [http-8400-1] DEBUG - retorno genera like: cg_isbn like 'family and fr%' OR
+2012-02-25 11:06:44,734 [http-8400-1] DEBUG - where: cg_autor like 'family and fr%' OR cg_descripcion like 'family and fr%' OR cg_editorial like 'family and fr%' OR cg_isbn like 'family and fr%' OR
+2012-02-25 11:06:44,734 [http-8400-1] DEBUG - buscando catalogos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'family and fr%' OR cg_descripcion like 'family and fr%' OR cg_editorial like 'family and fr%' OR cg_isbn like 'family and fr%' ORDER BY cg_descripcion
+2012-02-25 11:06:45,000 [http-8400-1] DEBUG - fin ejecucion query en la base de datos:SELECT * FROM cg_catalogo WHERE  cg_autor like 'family and fr%' OR cg_descripcion like 'family and fr%' OR cg_editorial like 'family and fr%' OR cg_isbn like 'family and fr%' ORDER BY cg_descripcion
+2012-02-25 11:06:45,000 [http-8400-1] DEBUG - fin de retorno de lista

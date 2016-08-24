@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pedido_cliente" language="groovy" pageWidth="629" pageHeight="1000" columnWidth="589" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" isIgnorePagination="true">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="456"/>
+	<parameter name="nroRemito" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     `ed_editorial` ed_editorial INNER JOIN `re_remito` re_remito ON ed_editorial.`ed_editorial_k` = re_remito.`re_distribuidora_ed`
+     INNER JOIN `ri_remito_item` ri_remito_item ON re_remito.`re_remito_k` = ri_remito_item.`ri_remito_re`]]>
+	</queryString>
+	<field name="ed_editorial_k" class="java.lang.Integer"/>
+	<field name="ed_descripcion" class="java.lang.String"/>
+	<field name="re_remito_k" class="java.lang.Integer"/>
+	<field name="re_fecha" class="java.sql.Timestamp"/>
+	<field name="re_distribuidora_ed" class="java.lang.Integer"/>
+	<field name="re_observaciones" class="java.lang.String"/>
+	<field name="ri_remito_item_k" class="java.lang.Integer"/>
+	<field name="ri_remito_re" class="java.lang.Integer"/>
+	<field name="ri_catalogo_cg" class="java.lang.Integer"/>
+	<field name="ri_cantidad" class="java.lang.Integer"/>
+	<field name="ri_nombre_libro" class="java.lang.String"/>
+	<field name="ri_autor" class="java.lang.String"/>
+	<field name="ri_editorial" class="java.lang.String"/>
+	<field name="ri_isbn" class="java.lang.String"/>
+	<field name="ri_motivo" class="java.lang.String"/>
+	<field name="ri_factura" class="java.lang.String"/>
+	<variable name="Motivo" class="java.lang.String">
+		<variableExpression><![CDATA[($F{ri_motivo}!=null ? "(" + $F{ri_motivo} + ")" : "" )]]></variableExpression>
+	</variable>
+	<filterExpression><![CDATA[$F{re_remito_k}==$P{nroRemito}]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="122" splitType="Stretch">
+			<image>
+				<reportElement x="2" y="2" width="116" height="85"/>
+				<imageExpression class="java.lang.String"><![CDATA["logo.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="241" y="35" width="96" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="241" y="35" width="96" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[REMITO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="277" y="10" width="17" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="281" y="10" width="13" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="93" width="34" height="22"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="67" width="44" height="22"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Remito nro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="89" width="342" height="30"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[JUAN B. JUSTO 1514 – FLORIDA, VICENTE LOPEZ, BUENOS AIRES
+TEL/FAX:   4797-1182
+
+]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="434" y="93" width="121" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="67" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{re_remito_k}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="4" width="73" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Distribuidora:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="73" y="4" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ed_descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="566" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="504" y="1" width="62" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FACTURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="42" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="0" width="251" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TITULO                                                     ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="0" width="58" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EDITORIAL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="44" y="2" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement x="299" y="1" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement x="359" y="2" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement x="501" y="2" width="1" height="19"/>
+			</line>
+			<line>
+				<reportElement x="442" y="2" width="1" height="19"/>
+			</line>
+			<staticText>
+				<reportElement x="361" y="2" width="81" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUTOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="3" width="55" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ISBN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16">
+			<textField>
+				<reportElement x="6" y="1" width="41" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{ri_cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="1" width="58" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ri_editorial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="364" y="1" width="80" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ri_autor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="507" y="1" width="48" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ri_factura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="1" width="53" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ri_isbn}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="52" y="1" width="251" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ri_nombre_libro}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="11">
+			<printWhenExpression><![CDATA[$F{ri_motivo}!="" ]]></printWhenExpression>
+			<textField>
+				<reportElement x="52" y="0" width="394" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ri_motivo}!="" ? "(" + $F{ri_motivo} + ")" : "" ]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="54">
+			<line>
+				<reportElement x="2" y="2" width="587" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="6" width="71" height="20">
+					<printWhenExpression><![CDATA[$F{re_observaciones}!=""]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="83" y="6" width="457" height="45">
+					<printWhenExpression><![CDATA[$F{re_observaciones}!=""]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{re_observaciones}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="186" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="12" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,13 @@
+CREATE TABLE `ed_editorial` (
+  `ed_editorial_k` int(11) NOT NULL AUTO_INCREMENT,
+  `ed_descripcion` varchar(145) DEFAULT NULL,
+  PRIMARY KEY (`ed_editorial_k`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+
+ALTER TABLE `librosmario`.`pi_pedido_item` ADD COLUMN `pi_editorial_ed` INT(11) NULL  AFTER `pi_precio` ,
+  ADD CONSTRAINT `pi_editorial_ed`
+  FOREIGN KEY (`pi_editorial_ed` )
+  REFERENCES `librosmario`.`ed_editorial` (`ed_editorial_k` )
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+, ADD INDEX `pi_editorial_ed` (`pi_editorial_ed` ASC) ;

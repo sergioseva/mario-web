@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+	<appender name="appender" class="org.apache.log4j.DailyRollingFileAppender">
+	    <param name="File" value="${path}/Log.txt"/>
+    	<param name="Append" value="true"/>
+	<param name="DatePattern" value="'.'dd-MM-yyyy" />
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %p - %m%n"/>
+    </layout>
+  </appender>
+
+  <root>
+    <priority value ="debug"/>
+    <appender-ref ref="appender"/>
+  </root>
+
+</log4j:configuration>

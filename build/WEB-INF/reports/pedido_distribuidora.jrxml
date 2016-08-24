@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pedido_distribuidora2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="65da7be8-05de-4062-9f90-3a5eb833f130">
+	<property name="ireport.zoom" value="3.1384283767210035"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="0477ce19-6c31-4836-9c45-8fca3d7783a2"/>
+	<parameter name="distribuidora" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cantidad" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="autor" class="java.lang.String"/>
+	<field name="editorial" class="java.lang.String"/>
+	<sortField name="editorial"/>
+	<variable name="total_lineas" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{nombre}]]></variableExpression>
+	</variable>
+	<variable name="total_libros" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{cantidad}]]></variableExpression>
+	</variable>
+	<variable name="cantidad_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{cantidad}]]></variableExpression>
+	</variable>
+	<variable name="cantidad_2" class="java.lang.Integer" resetType="Group" resetGroup="Libros_iguales" calculation="Sum">
+		<variableExpression><![CDATA[$F{cantidad}]]></variableExpression>
+	</variable>
+	<group name="Libros_iguales">
+		<groupExpression><![CDATA[$F{nombre}+$F{autor}+$F{editorial}]]></groupExpression>
+		<groupFooter>
+			<band height="15">
+				<textField>
+					<reportElement uuid="33cd1a4a-135f-4366-9dc0-21a9693bd2c0" x="0" y="0" width="45" height="15"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{cantidad_2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="75ee5af1-a6a1-4bb5-9672-8c05bf9d77a9" x="57" y="0" width="332" height="15"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="ef0463d6-b072-40af-975d-54314fa42e84" x="481" y="0" width="66" height="15"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{editorial}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="e4cc8450-5dbc-4cb0-af60-3628e5547195" x="394" y="0" width="83" height="15"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{autor}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="123" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="9554f1f7-092c-4b89-b355-d11425f49724" x="10" y="89" width="342" height="30"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[JUAN B. JUSTO 1514 – FLORIDA, VICENTE LOPEZ, BUENOS AIRES
+TEL/FAX:   4797-1182
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2ceb8a69-2acf-41d0-84bd-5d7d919bf04f" x="10" y="67" width="100" height="22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIBROS MARIO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9c5f271e-a5fe-4c61-9368-eab445c3dba7" x="287" y="5" width="17" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="cb76e49c-a2a0-42d2-b00e-01426d4f6578" x="292" y="6" width="13" height="20"/>
+				<textElement/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="d1838cb9-e10d-4b1c-a020-5db364a65d59" x="7" y="5" width="82" height="62"/>
+				<imageExpression><![CDATA["C:\\blazeds\\tomcat\\webapps\\librosmario\\WEB-INF\\reports\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="384d1fe2-2319-42d1-a85b-2d126485e509" x="0" y="24" width="549" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="db390687-af43-4ebf-9d84-d37373916a42" x="18" y="0" width="102" height="20"/>
+				<textElement/>
+				<text><![CDATA[Pedido a Distribuidora]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="d7e9fa79-47ca-416c-b54e-b3a1d1041c1d" x="18" y="0" width="208" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="ec4985e1-b763-4e6e-842e-acb0e7f52d2c" x="127" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{distribuidora}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4b73237e-4b89-42dc-8e8f-2cc691b46b88" x="18" y="0" width="102" height="20"/>
+				<textElement/>
+				<text><![CDATA[Pedido a Distribuidora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c3edda78-6071-431a-98de-70e91f94de6f" x="242" y="0" width="34" height="22"/>
+				<textElement/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement uuid="774b621b-c88a-480a-b49e-2561829b6466" x="276" y="0" width="121" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="003bab9c-cfb6-4ed1-8aac-71aead72bcbd" x="1" y="29" width="44" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b325aa6f-4122-4d95-a678-c62856ec7da9" x="47" y="29" width="342" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="63941e70-ed7b-425d-8a5f-c4561011667e" x="393" y="29" width="83" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Autor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f1f07401-f110-4bd5-af32-13559bce182e" x="484" y="29" width="62" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Editorial]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="fc4d316a-f10f-4acb-ac26-bf34721d3cf8" x="46" y="24" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="e3c2d41b-728a-4805-ae20-2b7e9e0b2ed9" x="389" y="25" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="a7511aa9-9152-4b45-96cf-4625d986b158" x="479" y="24" width="1" height="20"/>
+			</line>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="15dcf924-a59a-43fe-ad5f-de2a6886b4fd" x="1" y="5" width="119" height="22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de libros pedidos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ea403b5e-cb2f-4ffd-8465-5bc98a229a42" x="120" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{total_libros}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="daadd3da-5f67-43b3-a068-e4957cf97bd4" x="2" y="0" width="549" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pedido_distribuidora2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="3.1384283767210035"/>
+	<property name="ireport.x" value="1097"/>
+	<property name="ireport.y" value="369"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<parameter name="distribuidora" class="java.lang.String"/>
+	<field name="cantidad" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="autor" class="java.lang.String"/>
+	<field name="editorial" class="java.lang.String"/>
+	<variable name="total_lineas" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{nombre}]]></variableExpression>
+	</variable>
+	<variable name="total_libros" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{cantidad}]]></variableExpression>
+	</variable>
+	<variable name="cantidad_1" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{cantidad}]]></variableExpression>
+	</variable>
+	<variable name="cantidad_2" class="java.lang.Integer" resetType="Group" resetGroup="Libros_iguales" calculation="Sum">
+		<variableExpression><![CDATA[$F{cantidad}]]></variableExpression>
+	</variable>
+	<group name="Libros_iguales">
+		<groupExpression><![CDATA[$F{nombre}+$F{autor}+$F{editorial}]]></groupExpression>
+		<groupFooter>
+			<band height="15">
+				<textField>
+					<reportElement x="0" y="0" width="45" height="15"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$V{cantidad_2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="57" y="0" width="332" height="15"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{nombre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="481" y="0" width="66" height="15"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{editorial}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="394" y="0" width="83" height="15"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{autor}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="123" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="89" width="342" height="30"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[JUAN B. JUSTO 1514 – FLORIDA, VICENTE LOPEZ, BUENOS AIRES
+TEL/FAX:   4797-1182
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="67" width="100" height="22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LIBROS MARIO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="287" y="5" width="17" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="292" y="6" width="13" height="20"/>
+				<textElement/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<image>
+				<reportElement x="7" y="5" width="82" height="62"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\blazeds\\tomcat\\webapps\\libros-mario-server\\WEB-INF\\reports\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="24" width="549" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="18" y="0" width="102" height="20"/>
+				<textElement/>
+				<text><![CDATA[Pedido a Distribuidora]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="18" y="0" width="208" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement x="127" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{distribuidora}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="0" width="102" height="20"/>
+				<textElement/>
+				<text><![CDATA[Pedido a Distribuidora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="0" width="34" height="22"/>
+				<textElement/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="276" y="0" width="121" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="29" width="44" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="29" width="342" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="393" y="29" width="83" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Autor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="29" width="62" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[Editorial]]></text>
+			</staticText>
+			<line>
+				<reportElement x="46" y="24" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="389" y="25" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="479" y="24" width="1" height="20"/>
+			</line>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="5" width="119" height="22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de libros pedidos:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="5" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{total_libros}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="0" width="549" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service"
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+    
+    <destination id="CatalogoConverter">
+    	<properties>
+			<source>model.librosmario.CatalogoConverter</source>
+		</properties>		
+	</destination>
+	
+	<destination id="PedidoPrinter">
+    	<properties>
+			<source>reports.PedidoPrinter</source>
+		</properties>		
+	</destination>
+	
+	<destination id="RemitoPrinter">
+    	<properties>
+			<source>reports.RemitoPrinter</source>
+		</properties>		
+	</destination>
+	
+	<destination id="PedidoItemsPrinter">
+    	<properties>
+			<source>reports.PedidoItemsPrinter</source>
+		</properties>		
+	</destination>	
+
+    <destination id="CatalogoDAO">
+    	<properties>
+			<source>dao.CatalogoDAO</source>
+		</properties>		
+	</destination>
+	
+    <destination id="ClienteDAO">
+    	<properties>
+			<source>dao.ClienteDAO</source>
+		</properties>		
+	</destination>		
+	
+	<destination id="EditorialDAO">
+    	<properties>
+			<source>dao.EditorialDAO</source>
+		</properties>		
+	</destination>
+	
+	<destination id="PedidoDAO">
+    	<properties>
+			<source>dao.PedidoDAO</source>
+		</properties>		
+	</destination>
+	
+	<destination id="RemitoDAO">
+    	<properties>
+			<source>dao.RemitoDAO</source>
+		</properties>		
+	</destination>
+	
+	<destination id="PedidoADistribuidoraDAO">
+    	<properties>
+			<source>dao.PedidoADistribuidoraDAO</source>
+		</properties>		
+	</destination>
+	
+	<destination id="PedidoItemDAO">
+    	<properties>
+			<source>dao.PedidoItemDAO</source>
+		</properties>		
+	</destination>
+	
+	<destination id="Pedido">
+    	<properties>
+			<source>model.librosmario.Pedido</source>
+		</properties>		
+	</destination>		
+	
+	<destination id="PedidoADistribuidora">
+    	<properties>
+			<source>model.librosmario.PedidoADistribuidora</source>
+		</properties>		
+	</destination>
+	
+	<destination id="PedidoItem">
+    	<properties>
+			<source>model.librosmario.PedidoItem</source>
+		</properties>		
+	</destination>
+	
+	<destination id="Sistema">
+    	<properties>
+			<source>model.librosmario.Sistema</source>
+		</properties>		
+	</destination>
+	
+	<destination id="Editorial">
+    	<properties>
+			<source>model.librosmario.Editorial</source>
+		</properties>		
+	</destination>
+  </service>

@@ -1,0 +1,2 @@
+ALTER TABLE `librosmario`.`cg_catalogo` CHANGE COLUMN `cg_codigo_luongo` `cg_codigo_luongo` INT(10) NULL
+, DROP INDEX `codigo_luongo_UNIQUE` ;

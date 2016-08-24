@@ -1,0 +1,1 @@
+ALTER TABLE `librosmario`.`pe_pedido` ADD COLUMN `pe_fecha_envio` DATE NULL  AFTER `pe_domicilio` , ADD COLUMN `pe_observaciones` VARCHAR(200) NULL  AFTER `pe_fecha_envio` ;

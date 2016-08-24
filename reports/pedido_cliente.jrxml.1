@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pedido_cliente" language="groovy" pageWidth="629" pageHeight="439" columnWidth="589" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" isIgnorePagination="true" uuid="cf7d4cf0-6fad-43d2-8cce-a90d24a172f4">
+	<property name="ireport.zoom" value="2.4793388429752063"/>
+	<property name="ireport.x" value="862"/>
+	<property name="ireport.y" value="578"/>
+	<parameter name="nroPedido" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     `cl_cliente` cl_cliente INNER JOIN `pe_pedido` pe_pedido ON cl_cliente.`cl_cliente_k` = pe_pedido.`pe_cliente_cl`
+     INNER JOIN `pi_pedido_item` pi_pedido_item ON pe_pedido.`pe_pedido_k` = pi_pedido_item.`pi_pedido_pe`]]>
+	</queryString>
+	<field name="cl_cliente_k" class="java.lang.Integer"/>
+	<field name="cl_nombre" class="java.lang.String"/>
+	<field name="cl_direccion" class="java.lang.String"/>
+	<field name="cl_telefono_fijo" class="java.lang.String"/>
+	<field name="cl_telefono_movil" class="java.lang.String"/>
+	<field name="cl_telefono_laboral" class="java.lang.String"/>
+	<field name="cl_telefono_otro" class="java.lang.String"/>
+	<field name="cl_telefono_otro_descr" class="java.lang.String"/>
+	<field name="cl_email" class="java.lang.String"/>
+	<field name="pe_pedido_k" class="java.lang.Integer"/>
+	<field name="pe_cliente_cl" class="java.lang.Integer"/>
+	<field name="pe_fecha" class="java.sql.Timestamp"/>
+	<field name="pe_senia" class="java.math.BigDecimal"/>
+	<field name="pe_total" class="java.math.BigDecimal"/>
+	<field name="pe_adomicilio" class="java.lang.Object"/>
+	<field name="pe_domicilio" class="java.lang.String"/>
+	<field name="pe_fecha_envio" class="java.sql.Date"/>
+	<field name="pe_observaciones" class="java.lang.String"/>
+	<field name="pi_pedido_item_k" class="java.lang.Integer"/>
+	<field name="pi_pedido_pe" class="java.lang.Integer"/>
+	<field name="pi_catalogo_cg" class="java.lang.Integer"/>
+	<field name="pi_cantidad" class="java.lang.Integer"/>
+	<field name="pi_nombre_libro" class="java.lang.String"/>
+	<field name="pi_autor" class="java.lang.String"/>
+	<field name="pi_editorial" class="java.lang.String"/>
+	<field name="pi_isbn" class="java.lang.String"/>
+	<field name="pi_precio" class="java.math.BigDecimal"/>
+	<field name="pi_editorial_ed" class="java.lang.Integer"/>
+	<field name="pi_pendiente" class="java.lang.Object"/>
+	<variable name="total" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{pi_precio}*$F{pi_cantidad}]]></variableExpression>
+	</variable>
+	<variable name="pe_total_1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{pe_total}]]></variableExpression>
+	</variable>
+	<variable name="restaPagar" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{pe_total}-$F{pe_senia}]]></variableExpression>
+	</variable>
+	<variable name="adomicilio" class="java.lang.String"/>
+	<filterExpression><![CDATA[$F{pe_pedido_k}==$P{nroPedido}]]></filterExpression>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="eb410284-df9f-420e-b07a-8f1955e1ca76" x="241" y="35" width="96" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="1d091061-f8c0-44ba-8a90-1633ce50ee61" x="241" y="35" width="96" height="20"/>
+				<textElement/>
+				<text><![CDATA[NOTA DE PEDIDO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="8b7bb745-da49-44eb-b00e-5909bf56302e" x="277" y="10" width="17" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="f8e4cf01-1fc3-4abd-9821-bc7f14f3920d" x="281" y="10" width="13" height="20"/>
+				<textElement/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7b151307-81b7-4081-982e-cf80fca335e0" x="400" y="106" width="34" height="22"/>
+				<textElement/>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8f4099dd-e349-4fcd-808e-b46bb4223a78" x="368" y="67" width="97" height="22"/>
+				<textElement/>
+				<text><![CDATA[Nota de pedido nro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7893cb65-3ba7-4ad2-a176-ae6b5cce95d1" x="0" y="96" width="342" height="30"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[JUAN B. JUSTO 1514 – FLORIDA, VICENTE LOPEZ, BUENOS AIRES
+TEL/FAX:   4797-1182
+
+]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement uuid="46c1d0da-0db3-4c91-86c4-1b9b1eb9744b" x="434" y="106" width="121" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="a0838b24-dcf8-4113-a03c-805c4503af21" x="4" y="0" width="106" height="89"/>
+				<imageExpression><![CDATA["C:\\blazeds\\tomcat\\webapps\\librosmario\\WEB-INF\\reports\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="79126502-23ae-461d-a5e8-25e105686945" x="155" y="10" width="43" height="20"/>
+				<textElement/>
+				<text><![CDATA[Telefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5af79ae2-787d-4e79-9687-018cdaba5723" x="303" y="10" width="43" height="20"/>
+				<textElement/>
+				<text><![CDATA[Celular:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="580af047-e950-4989-845f-17df03a3abff" x="43" y="10" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cl_nombre}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="01bcf815-f2c5-485a-a278-9b63ab6d6955" x="198" y="10" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cl_telefono_fijo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f128b933-826f-449c-a457-4a9e01f3932d" x="0" y="10" width="43" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dac62009-4871-42c8-ad63-688a69b2aca1" x="346" y="10" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{cl_telefono_movil}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="d0867821-7358-4f09-b8bc-4ed06d805524" x="2" y="1" width="553" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="f6519330-203e-4a7f-af60-e60ec34613a8" x="4" y="0" width="55" height="20"/>
+				<textElement/>
+				<text><![CDATA[CANTIDAD                                             ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3f74ff13-bccf-4225-a32e-efa6d5c3a4a0" x="500" y="0" width="46" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3a8d3d23-d825-4856-b4c3-59096d418c09" x="453" y="0" width="41" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[PRECIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7bfd1c7b-784a-43e0-9493-363cd2e58336" x="277" y="1" width="58" height="20"/>
+				<textElement/>
+				<text><![CDATA[EDITORIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2c1b9547-9369-4d67-b418-208fdf7b367f" x="62" y="0" width="211" height="20"/>
+				<textElement/>
+				<text><![CDATA[TITULO                                                     ]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="e4794dfa-2ca7-46d3-99b6-354d3f14f760" x="496" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="cc3321ba-f13d-4d03-a1f8-2335f26d0fea" x="367" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="ad566467-6a8e-473e-ae2f-b70abf0688f8" x="275" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="2e912bd5-1b94-45c1-9bfc-0b813824d963" x="60" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement uuid="b26a74ac-16e7-4cf6-9be3-5d34301dc925" x="452" y="1" width="1" height="20"/>
+			</line>
+			<staticText>
+				<reportElement uuid="30791cf5-fb89-4218-8f7b-c2ac0f4be45b" x="372" y="1" width="66" height="18"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[AUTOR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22">
+			<textField>
+				<reportElement uuid="671538ed-91f8-4d90-b8ba-5b386d4fbc2a" x="0" y="1" width="59" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{pi_cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3911cab7-dcf8-4d37-9424-33843e71b6fa" x="62" y="0" width="211" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pi_nombre_libro}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,##0.00">
+				<reportElement uuid="24cc97c0-4125-4c1f-95a8-7d5135586de6" x="452" y="1" width="42" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{pi_precio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="df4ef9c0-e423-4931-9a6b-e2ee66d49529" x="497" y="2" width="57" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e10d6d03-84d3-45b5-acf6-23bde7a588dc" x="277" y="0" width="91" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pi_editorial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="852e3e29-9fad-4039-98ec-88441b937fba" x="368" y="1" width="78" height="19"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pi_autor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="354ae173-b384-4750-9925-f3adb25e158d" x="346" y="5" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[TOTAL GENERAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ede12257-6c10-442b-bb51-96b4074b9b0d" x="346" y="25" width="100" height="20"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[RESERVA:]]></text>
+			</staticText>
+			<textField pattern="$ #,##0.00">
+				<reportElement uuid="a8ba6586-ef53-4fc0-bfe8-5591d22402ba" x="464" y="5" width="78" height="20"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pe_total}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$ #,##0.00">
+				<reportElement uuid="bafe421b-6c67-42b2-a821-bbc1bb7418c0" x="464" y="25" width="78" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{pe_senia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="139" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="28eb3712-fc52-493c-b238-a78ae7863fa9" x="12" y="99" width="98" height="20">
+					<printWhenExpression><![CDATA[$F{pe_adomicilio}==1]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Dirección de entrega:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="867b5c61-aa6a-4332-8f92-264e22bfa3be" x="12" y="41" width="442" height="54">
+					<printWhenExpression><![CDATA[$F{pe_adomicilio}==1]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Solicita envío a domicilio.
+
+En caso de haber libros agotados o no poder cumplirse con el pedido en este plazo se notificará telefónicamente.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cabe8b67-60cb-49be-872f-ced1cc68af4a" x="12" y="119" width="131" height="20">
+					<printWhenExpression><![CDATA[$F{pe_adomicilio}==1]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Envío a domicilio pagado.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="723be2bf-0ce8-4810-bbe4-35980be4bd3f" x="10" y="0" width="532" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LOS PRECIOS DE ESTA NOTA DE PEDIDO ESTAN SUJETOS A MODIFICACION POR PARTE DE LA EDITORIAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a623222-e698-4c78-a2fb-9da1d8232ffd" x="285" y="99" width="98" height="20">
+					<printWhenExpression><![CDATA[$F{pe_adomicilio}==1]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Fecha de entrega:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="72f72efb-f389-436b-b31d-e568127897a0" x="383" y="99" width="100" height="20">
+					<printWhenExpression><![CDATA[$F{pe_adomicilio}==1]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pe_fecha_envio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="812bf6d9-9a56-49ad-bd1b-02c827bece73" x="118" y="99" width="159" height="20">
+					<printWhenExpression><![CDATA[$F{pe_adomicilio}==1]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{pe_domicilio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="08571a2b-f0f4-41b4-9d66-cde38a90beb9" x="10" y="20" width="416" height="20"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[LOS PRECIOS DE LOS TEXTOS ESCOLARES SON EN EFECTIVO]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="23" splitType="Stretch"/>
+	</summary>
+</jasperReport>

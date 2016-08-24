@@ -1,0 +1,1 @@
+ALTER TABLE `librosmario`.`pi_pedido_item` ADD COLUMN `pi_editorial` VARCHAR(45) NULL  AFTER `pi_autor` ;
